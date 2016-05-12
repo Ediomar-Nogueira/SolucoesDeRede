@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+
+<h:body>
+
+	<pm:page id="solucaosw">
+		<pm:header title="Soçuções Sem Sinal Wifi " />
+		<pm:content>
+			<h:form id="frmProblema">
+				<p:accordionPanel dynamic="true" cache="true">
+					<p:tab title="Problema 01">
+						<h:outputText value="The story begins as Don Vito Corleon..." />
+					</p:tab>
+					<p:tab title="Problema 02">
+						<h:outputText value="Francis Ford Coppola's ..." />
+					</p:tab>
+					<p:tab title="Problema 03">
+						<h:outputText value="After a break of more than 15 years..." />
+					</p:tab>
+					<p:tab title="Problema 04">
+						<h:outputText value="After a break of more than 15 years..." />
+					</p:tab>
+					<p:tab title="Problema 05">
+						<h:outputText value="After a break of more than 15 years..." />
+					</p:tab>
+				</p:accordionPanel>
+				<p:commandButton value="Voltar" action="problemas.ifba" />
+			</h:form>
+		</pm:content>
+	</pm:page>
+
+</h:body>
+
+</html>

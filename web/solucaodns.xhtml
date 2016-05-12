@@ -1,0 +1,141 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+
+<h:body>
+
+	<pm:page id="solucaodns">
+		<pm:header title="Soçuções-DNS" />
+		<pm:content>
+			<h:form id="frmProblema">
+				<p:accordionPanel dynamic="true" cache="true">
+					<p:tab title="Verificando sua conexão">
+						<h:outputText
+							value="Conecte outro dispositivo à rede. Antes de começar a tentar resolver o problema, isso ajudará a saber onde o mesmo está ocorrendo. Você pode diminuir o problema realizando alguns testes rápidos. Conecte outro dispositivo a seu roteador, com ou sem fio.
+Você pode usar outro computador, um smartphone ou tablet. Qualquer coisa que acesse a internet funcionará para testar." />
+					</p:tab>
+					<p:tab title="Acesse a página de dispositivo">
+						<h:outputText
+							value="Se você ainda estiver recebendo erros de DNS, o problema está em seu roteador ou em seu ISP(Internet Service Provider). Se você puder se conectar ao site, o problema está vindo do primeiro computador." />
+					</p:tab>
+					<p:tab title="Reinicie o modem e o roteador">
+						<h:outputText
+							value="Desconecte o cabo de alimentação do modem, bem como o cabo de alimentação do seu roteador. Deixe que eles fiquem sem energia por pelo menos 30 segundos, de modo que qualquer carga residual seja liberada e a memória apagada. Religue seu modem e espere que ele se conecte totalmente. Depois que ele tenha se ligado completamente, reconecte o cabo de alimentação ao seu roteador e deixe que ele inicie. Isso pode levar até um minuto.
+Uma vez que você tenha desligado e ligado novamente os dois dispositivos, tente novamente se conectar a um site. Se o problema ainda persistir, passe para a próxima seção." />
+					</p:tab>
+
+					<p:tab title="Tente um navegador diferente">
+						<h:outputText
+							value=" Esta é uma das formas mais rápidas de testar suas conexões DNS. Baixe um navegador gratuito diferente como o Firefox ou Chrome e tente se conectar à internet. Se os problemas persistirem, provavelmente a falha não seja com o navegador, mas com alguma outra configuração no computador.
+Se os problemas forem resolvidos, você pode tentar corrigir seu navegador antigo. Muitas vezes, o problema decorre das configurações de proxy." />
+					</p:tab>
+					<p:tab title="Desative quaisquer conexões">
+						<h:outputText
+							value="Ocasionalmente, o Windows instalará conexões extras que você não usará normalmente. Para melhor conectividade, você deve ter apenas as conexões que usa regularmente habilitadas. Para abrir a janela de suas Conexões de Rede, clique no menu Iniciar ou pressione o botão ⌘ Win e busque por 'ncpa.cpl'.
+Procure por conexões extras. Você deverá ver uma lista de todas as suas conexões. A causa mais comum de problemas de DNS é a existência do 'Microsoft Virtual WiFi Miniport Adapter'. SE você vir isto, clique com o botão direito e selecione 'Desabilitar'.[1]
+Teste novamente sua conexão. Aguarde alguns instantes e abra novamente o navegador. Tente visitar um site. O DNS pode levar alguns instantes para carregar, mas se a página aparecer em seguida, o problema foi resolvido. Se não, siga para o próximo passo." />
+					</p:tab>
+
+					<p:tab title="Libere seu DNS">
+						<h:outputText
+							value="Às vezes, o cache do DNS fica desatualizado e precisa ser liberado manualmente. Isto pode ser feito a partir do Prompt de Comando." />
+						<br />
+						<h:outputText
+							value="  *Para abrir o Prompt de Comando, pressione ⌘ Win+R e digite cmd." />
+						<br />
+						<h:outputText
+							value="  *Digite ipconfig /flushdns. Espere até que o comando seja processado. Após isso, reinicie o computador." />
+						<br />
+						<h:outputText
+							value="  *Teste a conexão novamente. Se o problema ainda persistir, passe para o próximo passo." />
+					</p:tab>
+					<p:tab title="Altere seu servidor de DNS">
+						<h:outputText
+							value="Você pode inserir manualmente um servidor DNS alternativo para tentar se conectar em vez disso. Para executar tal ação, abra novamente a janela 'ncpa.cpl' e clique com o botão direito em sua conexão ativa. Selecione 'Propriedades'." />
+						<br />
+						<h:outputText
+							value="*Na aba Rede, desça até que você encontre a entrada 'Protocolo TCP/IP Versão 4 (TCP/IPv4)'. Clique nele para selecioná-lo e clique no botão Properties." />
+						<br />
+						<h:outputText
+							value="*Clique na opção 'Usar os seguintes endereços de servidor DNS'" />
+						<br />
+						<h:outputText
+							value="*Digite 208.67.222.222 no campo 'Servidor DNS Preferencial'" />
+						<br />
+						<h:outputText
+							value="*Digite 208.67.220.220 no campo 'Servidor DNS Alternativo'" />
+						<br />
+						<h:outputText
+							value="*Estes são os servidores DNS mantidos pela OpenDNS, um serviço de DNS open-source." />
+						<br />
+					</p:tab>
+					<p:tab title="Tente conectar no Modo Seguro">
+						<h:outputText
+							value="Reiniciar seu computador em Modo de Segurança carregará apenas os arquivos essenciais para o Windows, o que lhe permitirá determinar se outro programa ou serviço tal como seu antivírus está causando os problemas de conexão.
+Você pode tentar desabilitar o antivírus primeiro e ver se isso corrige o problema. Se sim, você deve desinstalar seu antivírus e instalar um novo.
+Reinicie seu computador e mantenha pressionada a tecla F8 enquanto ele estiver reiniciando.
+Selecione o Modo Seguro com Rede na lista de opções.
+Teste a conexão. Se você for capaz de se conectar com êxito à internet, o problema está com um programa em execução em seu computador. Examine os arquivos de inicialização e desabilite os programas até que você encontre o culpado." />
+					</p:tab>
+					<p:tab title="Conecte diretamente ao modem">
+						<h:outputText
+							value=" Se você estiver usando um roteador para criar uma rede doméstica, desconecte o computador dele e conecte um cabo Ethernet diretamente na porta Ethernet do seu modem.
+Tente carregar um site. Se você ainda está recebendo erros de DNS, o problema provavelmente está com o ISP. Contacte-os e pergunte sobre a conexão com os servidores de DNS.
+Se você puder se conectar a uma página web, o problema decorre de seu roteador. Reconecte seu roteador ao modem e conecte seu computador de volta à rede para continuar a resolução de problemas." />
+					</p:tab>
+					<p:tab title="Adicione mais servidores DNS">
+						<h:outputText
+							value="Informe os servidores DNS alternativos. Você pode alterar as configurações do seu roteador de modo que ele tente se conectar manualmente aos servidores DNS alternativos. Isso pode lhe dizer se o servidor DNS do seu provedor de Internet pode estar com defeito.
+" />
+						<h:outputText
+							value="*Abra a página de configuração do router. Isto é diferente para cada roteador, mas, essencialmente, você terá que digitar o endereço IP do seu roteador na barra de endereços do seu navegador." />
+						<br />
+						<h:outputText
+							value="*Abra a seção de Internet. Encontre a subseção marcada como 'Endereço do Domain Name Server (DNS)'" />
+						<br />
+						<h:outputText
+							value="*Defina-o para usar manualmente os servidores DNS que você digitar" />
+						<br />
+						<h:outputText
+							value="*Digite as informações do servidor OpenDNS (Primário - 208.67.222.222, Secundário - 208.67.220.220) ou informação do servidor DNS do Google (Primário - 8.8.8.8, Secundário - 8.8.4.4)" />
+						<br />
+						<h:outputText
+							value="*Clique em Aplicar ou Salvar Alterações. O roteador levará alguns momentos para aplicar as alterações." />
+						<br />
+						<h:outputText
+							value="*Teste-o. Abra uma nova janela do navegador em seu computador e tente se conectar a um site. Se você for capaz de se conectar, é mais provável que o ISP tenha problemas de DNS." />
+						<br />
+
+					</p:tab>
+					<p:tab title="Resete seu router">
+						<h:outputText
+							value=" Às vezes, as configurações em seu roteador podem ter se corrompido e a forma mais fácil de corrigi-las é simplesmente resetã-lo para as configurações padrão. Isso redefinirá as configurações de rede sem fio e qualquer informação encaminhamento de porta." />
+						<br />
+						<h:outputText
+							value="*Para resetar seu roteador, use um clipe de papel ou outro objeto pontiagudo para pressionar e segurar o botão Reset, na parte de trás do aparelho." />
+						<br />
+					</p:tab>
+					<p:tab title="Reconfigure seu roteador">
+						<h:outputText
+							value="Depois que ele tenha sido resetado, você precisará reconfigurar sua rede sem fio (se você estava usando ela). Quaisquer senhas e contas de admin também serão resetadas." />
+					</p:tab>
+				</p:accordionPanel>
+				<h4>Fonte:pt.wikihow.com </h4>
+				<p:commandButton value="Voltar" action="problemas.ifba" />
+			</h:form>
+		</pm:content>
+	</pm:page>
+
+</h:body>
+
+</html>

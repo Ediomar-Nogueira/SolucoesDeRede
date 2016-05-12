@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+
+<h:body>
+
+	<pm:page id="solucaogd">
+		<pm:header title="Soçuções De Grupo Doméstico" />
+		<pm:content>
+			<h:form id="frmProblema">
+				<p:accordionPanel dynamic="true" cache="true">
+					<p:tab title="Ferramenta 'HomeGroup Fix It'">
+						<h:outputText
+							value="Poderão existir vários motivos pelos quais você talvez não 
+						consiga ingressar em um grupo doméstico. Primeiro, tente executar um assistente 
+						FixIt para diagnosticar e corrigir problemas comuns ao ingressar em um grupo 
+						doméstico." />
+						<br />
+						<a href="http://go.microsoft.com/?linkid=9755488">Download-HomeGroup
+							Fix It</a>
+						<br />
+						<h:outputText
+							value="Execute o Fix It e siga os passos do assistente." />
+					</p:tab>
+					<p:tab title="Verificação De Rede">
+						<h:outputText
+							value="Para conectar-se à rede, siga estas instruções: " />
+						<br />
+
+						<h:outputText
+							value="*Clique no ícone de rede (Imagem do ícone de rede sem fio ou Imagem do ícone de rede com fio) na área de notificação da sua barra de tarefas." />
+						<br />
+						<h:outputText
+							value="*Clique na rede à qual você deseja se conectar e clique em Conectar. Você pode ter que inserir uma chave de segurança de rede." />
+						<br />
+
+						<h:outputText
+							value="*Depois de se conectar à rede, você poderá ingressar no grupo doméstico, caso haja algum na rede." />
+						<br />
+					</p:tab>
+					<p:tab title="Local De Rede">
+						<h:outputText
+							value="O local de rede pode não estar definido como Residencial. O Grupo Doméstico só funciona em redes domésticas (particulares). Para alterar o local da rede, siga estas instruções:" />
+						<br />
+						<h:outputText
+							value="*Para abrir a Central de Redes e Compartilhamento, clique no botão IniciarImagem do botão Iniciar e em Painel de Controle. Na caixa de pesquisa, digite rede e clique em Central de Redes e Compartilhamento." />
+						<br />
+						<h:outputText
+							value="*Clique em Rede de trabalho ou Rede pública e clique em Rede doméstica." />
+						<br />
+					</p:tab>
+					<p:tab title="Descoberta De Rede Está Desativada">
+						<h:outputText
+							value="1.Para abrir as Configurações de compartilhamento avançadas, clique no botão IniciarImagem 
+						do botão Iniciar e clique em Painel de Controle. Na caixa de pesquisa, digite 
+						rede, clique em Central de Rede e Compartilhamento e, no painel esquerdo, 
+						clique em Alterar as configurações de compartilhamento avançadas." />
+						<br />
+						<h:outputText
+							value="2.Clique nas divisas Imagem do ícone de divisa para expandir o perfil de rede Doméstica 
+						ou de Trabalho." />
+						<br />
+						<h:outputText
+							value="3.Clique em Ativar descoberta de rede e em Salvar alterações.  É necessário ter permissão do administradorSe você for solicitado a informar uma senha de administrador ou sua confirmação, digite a 
+						senha ou forneça a confirmação." />
+						<br />
+					</p:tab>
+				</p:accordionPanel><br/>
+				<a href="http://windows.microsoft.com/pt-br/windows7/why-can-t-i-join-a-homegroup">Link Da Fonte</a><br/><br/>
+				
+				<p:commandButton value="Voltar" action="problemas.ifba" />
+			</h:form>
+		</pm:content>
+	</pm:page>
+
+</h:body>
+
+</html>
