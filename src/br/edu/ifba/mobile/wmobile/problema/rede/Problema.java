@@ -59,7 +59,8 @@ public class Problema {
 		pro.setProximaSolucao(new SolucaoSW());
 		pro.setProximaSolucao(new SolucaoSCR());
 
-		System.out.println("Aplicação utilizada por " + nome + " " + (formatador.format(calendar.getTime())));
+		System.out.println("Aplicação utilizada por " + nome + " " + (formatador.format(calendar.getTime()))+
+				" Para Problema: " + tipo);
 		resultado = pro.resolver(tipo);
 	}
 }

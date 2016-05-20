@@ -15,6 +15,7 @@
 <h:body>
 
 	<pm:page id="resultado">
+	<pm:header title="Solução" />
 
 		<pm:content>
 			<h:form id="frmProblema">
@@ -31,6 +32,11 @@
 					align="down" /></CENTER>
 
 				<p:commandButton value="Voltar" action="problemas.ifba" />
+				<pm:content>
+				<h:form id="frmProblema">
+					<p:commandButton value="Sair" action="inicio.ifba" />
+				</h:form>
+			</pm:content>
 			</h:form>
 		</pm:content>
 	</pm:page>

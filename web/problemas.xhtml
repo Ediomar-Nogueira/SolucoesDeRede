@@ -15,24 +15,25 @@
 <h:body>
 
 	<pm:page id="tipoProblema">
-
 		<pm:header title="Opções" />
+
 		<pm:content>
+
 			<h:form id="frmProblema">
-				<p:dataList id="dlProblemas" 
-					value="#{pro.tiposProblema}" var="tipo">
-					<p:commandLink value="#{tipo}" 
-						action="resultado.ifba">
-						<f:setPropertyActionListener 
-							target="#{pro.problemaEscolhido}"
+				<p:dataList id="dlProblemas" value="#{pro.tiposProblema}" var="tipo">
+					<p:commandLink value="#{tipo}" action="resultado.ifba">
+						<f:setPropertyActionListener target="#{pro.problemaEscolhido}"
 							value="#{tipo}">
 						</f:setPropertyActionListener>
 					</p:commandLink>
 				</p:dataList>
 			</h:form>
 		</pm:content>
-		<CENTER><p:graphicImage value="/imgs/note.png" width="70%" height="60%"
-					align="down" /></CENTER>
+		<CENTER>
+			<p:graphicImage value="/imgs/note.png" width="70%" height="60%"
+				align="down" />
+		</CENTER>
+		<p:commandButton value="Sair" action="inicio.ifba" />
 	</pm:page>
 
 </h:body>
